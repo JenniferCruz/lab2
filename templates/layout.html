@@ -1,0 +1,30 @@
+<html> 
+<head>
+	<!-- Flask's function URL4 tells Flask to go to the static folder and look for the file bootstrap.min.css​ .  -->
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+	<!-- Custom styles for this template -->
+	<link href="{{ url_for('static', filename='css/clean.css') }}" rel="stylesheet">
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>
